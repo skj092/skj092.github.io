@@ -1,0 +1,52 @@
+---
+title: "Knowledge Distillation Survey Note"
+author: "Sonu Jha"
+date: "2025-07-28"
+categories: ["Note"]
+---
+
+Knowledge Distillation survey paper notes
+
+![](kd.png)
+
+# [A Comprehensive Survey on Knowledge Distillation](https://arxiv.org/abs/2503.12067)
+
+## Introduction:
+- Need for Knowledge Distillation (KD) in deep learning
+- KD vs Other model compression techniques
+- What is Knowledge Distillation?
+- Key challenges in KD
+- Coverage of the survey
+
+## Sources:
+- Logit-based Distillation:
+    - Loss functions
+    - Variants of logit-based distillation
+    - Disadvantages of logit-based distillation
+- Feature-based Distillation:
+    - Advantages of feature-based distillation
+    - Loss functions
+    - Variants of feature-based distillation
+    - challenges of feature-based distillation
+- Similarity-based Distillation:
+    - TODO
+
+## Schemes:
+- Offline Distillation:
+    - Definition and process
+    - Advantages and disadvantages
+- Online Distillation:
+    - Definition and process
+    - Advantages and disadvantages
+- Self-Distillation:
+    - Definition and process
+    - Advantages and disadvantages
+
+## Algorithms (TODO):
+- Attention-based Distillation
+- Adversarial Distillation
+- Multi-teacher Distillation
+- Cross-modal Distillation
+- Graph-baesd Distillation
+- Adaptive Distillation
+- Constrastive Distillation

@@ -10,5 +10,8 @@
   },
   "about.qmd": {
     "about.html": "ffde2594"
+  },
+  "posts/knowledge-distillation/index.qmd": {
+    "index.html": "391f7d55"
   }
 }

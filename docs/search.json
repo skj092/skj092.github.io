@@ -7,24 +7,45 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "myblog",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 23, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 20, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Knowledge Distillation Survey Note\n\n\n\nNote\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nSonu Jha\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/knowledge-distillation/index.html",
+    "href": "posts/knowledge-distillation/index.html",
+    "title": "Knowledge Distillation Survey Note",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Knowledge Distillation survey paper notes"
+  },
+  {
+    "objectID": "posts/knowledge-distillation/index.html#introduction",
+    "href": "posts/knowledge-distillation/index.html#introduction",
+    "title": "Knowledge Distillation Survey Note",
+    "section": "Introduction:",
+    "text": "Introduction:\n\nNeed for Knowledge Distillation (KD) in deep learning\nKD vs Other model compression techniques\nWhat is Knowledge Distillation?\nKey challenges in KD\nCoverage of the survey"
+  },
+  {
+    "objectID": "posts/knowledge-distillation/index.html#sources",
+    "href": "posts/knowledge-distillation/index.html#sources",
+    "title": "Knowledge Distillation Survey Note",
+    "section": "Sources:",
+    "text": "Sources:\n\nLogit-based Distillation:\n\nLoss functions\nVariants of logit-based distillation\nDisadvantages of logit-based distillation\n\nFeature-based Distillation:\n\nAdvantages of feature-based distillation\nLoss functions\nVariants of feature-based distillation\nchallenges of feature-based distillation\n\nSimilarity-based Distillation:\n\nTODO"
+  },
+  {
+    "objectID": "posts/knowledge-distillation/index.html#schemes",
+    "href": "posts/knowledge-distillation/index.html#schemes",
+    "title": "Knowledge Distillation Survey Note",
+    "section": "Schemes:",
+    "text": "Schemes:\n\nOffline Distillation:\n\nDefinition and process\nAdvantages and disadvantages\n\nOnline Distillation:\n\nDefinition and process\nAdvantages and disadvantages\n\nSelf-Distillation:\n\nDefinition and process\nAdvantages and disadvantages"
+  },
+  {
+    "objectID": "posts/knowledge-distillation/index.html#algorithms-todo",
+    "href": "posts/knowledge-distillation/index.html#algorithms-todo",
+    "title": "Knowledge Distillation Survey Note",
+    "section": "Algorithms (TODO):",
+    "text": "Algorithms (TODO):\n\nAttention-based Distillation\nAdversarial Distillation\nMulti-teacher Distillation\nCross-modal Distillation\nGraph-baesd Distillation\nAdaptive Distillation\nConstrastive Distillation"
   }
 ]
