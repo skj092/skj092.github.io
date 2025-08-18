@@ -1,5 +1,5 @@
 ---
-title: "Another Data Science Student Blog"
+title: "Another Data Science Student's Blog"
 listing:
   contents: posts
   sort: "date desc"
