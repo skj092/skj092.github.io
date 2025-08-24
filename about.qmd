@@ -13,4 +13,4 @@ about:
 
 ---
 
-I am a machine learning engineer with deep interest in intersection of machine learning and mathematics.
+I am a machine learning engineer with deep interest one tha area of intersection between machine learning and mathematics.
