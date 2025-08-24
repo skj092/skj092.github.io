@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/dont-let-ai-steal-your-learning/index.html",
       "/posts/knowledge-distillation/index.html"
     ]
   }

@@ -7,13 +7,6 @@
     "text": "I am a machine learning engineer with deep interest in intersection of machine learning and mathematics."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Another Data Science Student’s Blog",
-    "section": "",
-    "text": "Knowledge Distillation Survey Note\n\n\n\nNote\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nSonu Jha\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/knowledge-distillation/index.html",
     "href": "posts/knowledge-distillation/index.html",
     "title": "Knowledge Distillation Survey Note",
@@ -47,5 +40,54 @@
     "title": "Knowledge Distillation Survey Note",
     "section": "Algorithms (TODO):",
     "text": "Algorithms (TODO):\n\nAttention-based Distillation\nAdversarial Distillation\nMulti-teacher Distillation\nCross-modal Distillation\nGraph-baesd Distillation\nAdaptive Distillation\nConstrastive Distillation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Another Data Science Student’s Blog",
+    "section": "",
+    "text": "Don’t Let AI Steal Your Learning\n\n\n\nNote\n\n\n\n\n\n\n\n\n\nAug 24, 2025\n\n\nSonu Jha\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Distillation Survey Note\n\n\n\nNote\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nSonu Jha\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "",
+    "text": "Short-term shortcut widen the knowledge gap. Long-term growth comes from doing the work."
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html#why-implement-papers-yourself",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html#why-implement-papers-yourself",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "Why Implement Papers Yourself?",
+    "text": "Why Implement Papers Yourself?\nRecently, a friend suggested: “Why don’t you use this new tool to implement research papers?”\nThat made me pause and think. Why do we even bother implementing papers ourselves?"
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html#the-purpose-of-implementation",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html#the-purpose-of-implementation",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "The Purpose of Implementation",
+    "text": "The Purpose of Implementation\nWhen I implement a paper, my goal is usually one of two things:\n\nTo test an idea under different conditions\nTo deeply understand what the main contribution really is\n\nFor both of these, relying on AI to do the heavy lifting doesn’t help much."
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html#discovery-through-process",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html#discovery-through-process",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "Discovery Through Process",
+    "text": "Discovery Through Process\nMost of the time, we don’t know exactly what we want at the start — and that’s normal. By working through the process ourselves, we discover what actually matters.\nIf AI does all the work for us: - We risk building something irrelevant. - Each iteration makes the system more complex, but since we didn’t lay the foundation, we can’t really understand or improve it. - At some point, we get lost."
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html#knowledge-compounds",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html#knowledge-compounds",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "Knowledge Compounds",
+    "text": "Knowledge Compounds\nKnowledge compounds. The time you spend understanding an idea is never wasted — it accumulates and pays off later.\nIf you skip that learning, you’ll keep restarting from the same point, stuck in a loop. That may work for short-term business goals, but it isn’t good for your own growth."
+  },
+  {
+    "objectID": "posts/dont-let-ai-steal-your-learning/index.html#beyond-reproduction",
+    "href": "posts/dont-let-ai-steal-your-learning/index.html#beyond-reproduction",
+    "title": "Don’t Let AI Steal Your Learning",
+    "section": "Beyond Reproduction",
+    "text": "Beyond Reproduction\nImplementing papers isn’t just about reproducing results. It’s about reproducing understanding.\nIf we outsource that part, we’re not saving time. We’re skipping growth."
   }
 ]

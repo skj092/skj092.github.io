@@ -1,0 +1,64 @@
+---
+title: "Don't Let AI Steal Your Learning"
+author: "Sonu Jha"
+date: "2025-08-24"
+categories: ["Note"]
+---
+
+Short-term shortcut widen the knowledge gap. Long-term growth comes from doing the work.
+
+
+![](ai-vs-human-intelligence-scaled.webp)
+
+## Why Implement Papers Yourself?
+
+Recently, a friend suggested:
+*"Why don't you use this new tool to implement research papers?"*
+
+That made me pause and think.
+Why do we even bother implementing papers ourselves?
+
+---
+
+## The Purpose of Implementation
+
+When I implement a paper, my goal is usually one of two things:
+
+1. **To test an idea under different conditions**
+2. **To deeply understand what the main contribution really is**
+
+For both of these, relying on AI to do the heavy lifting doesn’t help much.
+
+---
+
+## Discovery Through Process
+
+Most of the time, we don’t know *exactly* what we want at the start — and that’s normal.
+By working through the process ourselves, we **discover what actually matters**.
+
+If AI does all the work for us:
+- We risk building something irrelevant.
+- Each iteration makes the system more complex, but since we didn’t lay the foundation, we can’t really understand or improve it.
+- At some point, we get lost.
+
+---
+
+## Knowledge Compounds
+
+Knowledge compounds.
+The time you spend understanding an idea is never wasted — it **accumulates** and **pays off later**.
+
+If you skip that learning, you’ll keep restarting from the same point, stuck in a loop.
+That may work for short-term business goals, but it isn’t good for your own growth.
+
+---
+
+## Beyond Reproduction
+
+Implementing papers isn’t just about reproducing results.
+It’s about **reproducing understanding**.
+
+If we outsource that part, we’re not saving time.
+We’re skipping growth.
+
+---
