@@ -1,0 +1,24 @@
+---
+layout: default
+title: Writing
+---
+<div class="blog-page container">
+  <h1>Writing</h1>
+  <p class="subtitle">Notes on ML, books, habits, and life.</p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-list-item">
+      <a href="{{ post.url }}" class="post-list-title">{{ post.title }}</a>
+      <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if site.posts.size == 0 %}
+  <p style="color: var(--text-muted); padding: 2rem 0;">No posts yet. Coming soon.</p>
+  {% endif %}
+</div>
+

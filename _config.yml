@@ -1,0 +1,28 @@
+title: Sonu Jha
+description: AI Engineer · Reader · Writer. Building in ML, reading everything, writing to think.
+url: "https://skj092.github.io"
+author:
+  name: Sonu Jha
+  github: skj092
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - Takeout/
+  - .claude/
+  - README.md

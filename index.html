@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+<section class="home-hero container">
+  <h1>Sonu Jha</h1>
+  <p class="tagline">
+    AI Engineer in Mumbai. I work on <strong>machine learning systems</strong> — LLMs, computer vision, production ML pipelines.
+    I read widely, train obsessively, and write to make sense of it all.
+  </p>
+  <div class="home-links">
+    <a href="/blog/" class="btn btn-primary">Read my writing</a>
+    <a href="/now/" class="btn btn-ghost">What I'm doing now</a>
+    <a href="https://github.com/skj092" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<section class="about-strip container">
+  <p>
+    I grew up in Bihar and have spent the last fifteen years in Mumbai — studying, building, and trying to become
+    someone worth becoming. I'm a Kaggle Expert, have trekked in the Himalayas with the NMF at 14,500 feet,
+    and currently train MMA when I'm not reading research papers or debugging kernels.
+  </p>
+  <p>
+    This blog is where I write about what I'm learning and thinking — AI/ML, books, habits, and the occasional
+    reflection on life. I write to sweep my mind clean.
+  </p>
+</section>
+
+<section class="container">
+  <p class="section-title">Recent Writing</p>
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+    <li class="post-list-item">
+      <a href="{{ post.url }}" class="post-list-title">{{ post.title }}</a>
+      <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if site.posts.size > 5 %}
+  <div style="margin-top: 1.5rem;">
+    <a href="/blog/" class="btn btn-ghost">All posts →</a>
+  </div>
+  {% endif %}
+</section>
+
