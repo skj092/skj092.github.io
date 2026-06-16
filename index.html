@@ -5,38 +5,29 @@ title: Home
 <section class="home-hero container">
   <h1>Sonu Jha</h1>
   <p class="tagline">
-    AI Engineer. I work on <strong>machine learning systems</strong> — LLMs, computer vision, production ML pipelines.
+    AI Engineer. I build <strong>machine learning systems</strong> — LLMs, document intelligence, production inference pipelines.
   </p>
   <div class="home-links">
-    <a href="/blog/" class="btn btn-primary">Read my writing</a>
-    <a href="/now/" class="btn btn-ghost">What I'm doing now</a>
-    <a href="https://github.com/skj092" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+    <a href="/blog/" class="link-primary">Writing →</a>
+    <a href="https://github.com/skj092" target="_blank" rel="noopener">GitHub</a>
   </div>
 </section>
 
-<section class="about-strip container">
-  <p>
-    I work on machine learning systems — document intelligence, LLM-powered products, and production inference pipelines.
-    This blog is where I write about what I'm building and learning in AI/ML.
-  </p>
-</section>
-
 <section class="container">
-  <p class="section-title">Recent Writing</p>
+  <p class="section-title">Recent posts</p>
   <ul class="post-list">
     {% for post in site.posts limit:5 %}
     <li class="post-list-item">
       <a href="{{ post.url }}" class="post-list-title">{{ post.title }}</a>
       <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date: "%b %-d, %Y" }}
+        {{ post.date | date: "%Y-%m-%d" }}
       </time>
     </li>
     {% endfor %}
   </ul>
   {% if site.posts.size > 5 %}
-  <div style="margin-top: 1.5rem;">
-    <a href="/blog/" class="btn btn-ghost">All posts →</a>
+  <div style="padding-top:1.25rem;">
+    <a href="/blog/" style="font-size:0.8rem;color:var(--text-muted);">All posts →</a>
   </div>
   {% endif %}
 </section>
-
