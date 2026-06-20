@@ -5,6 +5,10 @@ date: 2026-06-20
 tags: [ai, agents, python, engineering, architecture]
 ---
 
+*These are my notes from a deep study session on the OpenClaude codebase. I used Claude as a mentor to guide the learning — the questions, the struggle to understand, and the mental models are mine; Claude helped me articulate them clearly.*
+
+---
+
 I spent a session doing something I should have done months ago: sitting down with the OpenClaude codebase — the open-source reimplementation of Claude Code — and refusing to move on until I could explain every architectural decision from first principles.
 
 Not just "what does this file do" but "why does this exist, what breaks if you remove it, and how would you rebuild it from scratch."
