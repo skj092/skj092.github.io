@@ -247,3 +247,118 @@ The LLM reasons. The loop handles every way the LLM's reasoning falls short — 
 The better your loop, the more capable your agent — even with the same underlying model.
 
 That's the thing nobody tells you when you start building. You don't improve agents by changing the model. You improve them by engineering the loop around the model.
+
+---
+
+## Production Checklist: Everything You Need Before Shipping
+
+The sections above explain the concepts. This section is the implementation checklist — every feature you need before calling an agent production-ready. Use this when starting a new agent project.
+
+### The Loop
+
+- [ ] `while True` exits on `end_turn` with no tool calls
+- [ ] `messages[]` strictly alternates `user` / `assistant` roles
+- [ ] Tool results wrapped as `user` role messages
+- [ ] Hard `max_turns` limit (default 50) — catches wandering agents
+
+### Reliability
+
+- [ ] **Tool failure loop guard** — track `(tool_name, error_category)` counts, exit after 3 consecutive identical failures, reset on success
+- [ ] **Rate limit retry** — `try/except` on HTTP 429, exponential backoff (1s → 2s → 4s), do NOT increment `turn_count` on retry
+- [ ] **Continuation nudge** — detect mid-thought `end_turn` with heuristics, inject synthetic "please continue", cap at 3 nudges
+- [ ] **Abort signal** — `threading.Event()` checked in every tool and LLM call so Ctrl+C stops everything cleanly
+
+### Context Management
+
+- [ ] **Auto-compaction** — estimate tokens before each LLM call, compact at 80% of context limit using a cheap model (Haiku)
+- [ ] **Large output truncation** — save tool output above 10k chars to disk, send LLM a file path pointer instead
+
+### Tool System
+
+- [ ] Strategy pattern — loop calls `execute_tool(name, input)` without knowing what tools do
+- [ ] Read-only tools run in parallel via `ThreadPoolExecutor`
+- [ ] Write tools run serially
+- [ ] `execute_tool` catches all exceptions and returns error strings — the LLM needs to see what went wrong
+
+### Safety
+
+- [ ] `can_use_tool()` permission gate before every execution
+- [ ] Dangerous bash pattern detection (`rm -rf /`, `curl | bash`, writes to `/etc/`)
+- [ ] At minimum: `interactive` mode that asks user before writes; `read_only` mode for analysis tasks
+
+### Memory & Context
+
+- [ ] Load `MEMORY.md` from home dir and project dir into system prompt at startup
+- [ ] Auto-inject `git status` and recent commits as project context
+
+### Observability
+
+- [ ] Log every tool call, result, token usage, and loop exit reason
+- [ ] Save full transcript as JSONL after each session
+- [ ] Track: turn count, compaction frequency, tool error rate, loop exit reason distribution
+
+---
+
+### Model Selection by Task
+
+| Task | Model | Why |
+|------|-------|-----|
+| Main agent loop | `claude-opus-4-8` | Best reasoning for complex tasks |
+| Context summarization | `claude-haiku-4-5-20251001` | Fast and cheap for mechanical work |
+| Permission classification | `claude-haiku-4-5-20251001` | Simple yes/no decisions |
+| Sub-agents | `claude-sonnet-4-6` | Good balance for parallel subtasks |
+
+---
+
+### Prompt to Give Claude When Building
+
+Copy this when asking Claude to implement an agentic system. It encodes all the patterns above so you don't have to explain them each time:
+
+```
+Build a production-grade coding agent in Python using the Anthropic SDK.
+Implement ALL of the following:
+
+Agent Loop:
+- while(True) loop that exits when LLM returns no tool calls (end_turn)
+- messages[] maintained as single source of truth, strictly alternating user/assistant
+- Tool results wrapped as "user" role messages (Anthropic API contract)
+- Hard max_turns limit (default 50)
+
+Reliability (all required):
+- Tool failure loop guard: track (tool_name, error_category) failures,
+  exit after 3 consecutive identical failures, reset counter on success
+- Rate limit retry: try/except on RateLimitError, exponential backoff (1s/2s/4s),
+  do NOT increment turn_count on retry — rate limit is infrastructure noise
+- Continuation nudge: detect mid-thought stops using heuristics,
+  inject synthetic "please continue" message, cap at 3 nudges
+- AbortController: threading.Event() checked in every tool and LLM call
+
+Context Management:
+- Auto-compaction: estimate tokens before each LLM call, compact at 80% of limit
+- Compaction: summarize messages[1:-4] using Haiku, replace with summary,
+  keep first message + last 4 messages verbatim
+- Large output: save tool output >10k chars to disk, send LLM a file path pointer
+
+Tool System:
+- Strategy pattern: loop calls execute_tool(name, input) without knowing implementations
+- Read-only tools (read_file, grep, glob): run in parallel via ThreadPoolExecutor
+- Write tools (bash, write_file, edit_file): run serially
+- execute_tool catches all exceptions, returns error string so LLM sees what went wrong
+
+Safety:
+- can_use_tool() gate before every execution
+- Dangerous pattern detection for bash (rm -rf /, curl|bash, writes to /etc/)
+- Permission modes: read_only, interactive (ask user), full_auto
+
+Memory:
+- Load MEMORY.md from ~/.agent/ and project dir into system prompt at startup
+- Auto-inject git status and recent commits as project context
+
+Observability:
+- Log every tool call, result, token usage, and loop exit reason
+- Save full transcript as JSONL after each session
+
+Tools to include: read_file, write_file, edit_file (string replacement),
+bash, grep, glob, list_dir.
+Use streaming for all LLM calls. Default model: claude-opus-4-8.
+```
